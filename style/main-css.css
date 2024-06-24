@@ -1,0 +1,123 @@
+:root {
+    --main-color: rgb(255, 0, 0);
+    --color-about: rgb(250, 95, 95);
+}
+.parent {
+    background: linear-gradient(to bottom,var(--main-color) 30%, white 30%,white 100%);
+    font-family: sans-serif;
+}
+.parent > .container {
+    width: 1280px;
+    margin: 0px auto;
+    background-color: white;
+    display: flex
+}
+/* start right container */
+.right {
+    width: calc(1280px / 2)
+}
+.right .container {
+    padding: 20px;
+    border: 10px solid rgba(255, 111, 111, 0.811);
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 260px;
+}
+.right .container > img {
+    width: 360px;
+    height: 200px;
+    transform: translate(-30%,10%)
+}
+/* end right container */
+
+/* start left container */
+.left {
+    width: calc(1280px / 2)
+}
+.left h1:first-child {
+    width: 60%;
+    text-transform: capitalize;
+
+}
+.left > div:first-of-type {
+    color: var(--color-about);
+    font-weight: bold;
+    position: relative;
+    margin-left: 80px
+}
+.left > div:first-of-type::before {
+    content: "";
+    border: 1px solid var(--color-about);
+    padding: 5px;
+    position: absolute;
+    left: -50px;
+    bottom: 2px
+
+}
+.left > div:first-of-type::after {
+    content: "";
+    border: 1.2px solid var(--color-about);
+    width: 30px;
+    position: absolute;
+    left: -44px;
+    bottom: 7px;
+}
+.left p:first-of-type {
+    width: 60%;
+    color: rgb(66, 66, 66);
+    line-height: 1.78;
+    margin: 20px 0px
+}
+.left > div:last-of-type {
+    display: flex;
+    justify-content: space-around;
+}
+.left > div:last-of-type > div{
+width: calc((100% - 40%) / 3);
+border: 2px solid #eee;
+padding: 40px 20px 20px;
+position: relative;
+}
+.left > div:last-of-type > .div-one::after {
+    content: "01";
+}
+.left > div:last-of-type > .div-two::after {
+    content: "02";
+}
+.left > div:last-of-type > .div-three::after {
+    content: "03";
+}
+.left > div:last-of-type > .allattr::after {
+    font-size: 50px;
+    color: #eeeeeeca;
+    position: absolute;
+    right: 22px;
+    bottom: 39px;
+} 
+.left > div:last-of-type > div::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: red red transparent transparent;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+}
+.left > div:last-of-type > div > h3 {
+    text-align: center;
+    z-index: 10;
+}
+.fa-dumbbell,
+.fa-briefcase,
+.fa-square-poll-vertical {
+    font-size: 35px;
+    color: var(--main-color);
+    margin-left: 40px;
+    transform: translate(20%);
+    
+
+}
+/* end left container */
